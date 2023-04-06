@@ -1,0 +1,36 @@
+.register-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--ion-color-primary);
+  font-weight: 800;
+}
+.register-content{
+  --background: var(--ion-color-primary);
+}
+ion-card {
+
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.register-btn{
+  --background: var(--ion-color-colapp);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.starting-image {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-laposte{
+  height:70px;
+  width: 70px;
+
+}
+.choose {
+  margin-top: 10px;
+  text-align: center;
+}

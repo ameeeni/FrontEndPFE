@@ -1,0 +1,60 @@
+<ion-content class="cp-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>S'inscrire</h1>
+      </div>
+      <form [formGroup]="clientParForm" >
+      <ion-item>
+        <ion-label position="floating"> CIN</ion-label>
+        <ion-input placeholder="Ecrire votre CIN" formControlName="cin"></ion-input>
+        <small *ngIf="clientParForm.controls['cin'].errors && clientParForm.controls['cin'].touched" class="ion-color-danger">
+          le CIN est obligatoire
+        </small>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Date de Naissance :</ion-label>
+        <ion-input type="date" placeholder="Ecrire votre Date de Naissance" formControlName="date_de_naissance"></ion-input>
+        <small *ngIf="clientParForm.controls['date_de_naissance'].errors && clientParForm.controls['date_de_naissance'].touched" class="ion-color-danger">
+          la date de naissance est obligatoire
+        </small>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Lieu De Naissance :</ion-label>
+        <ion-input placeholder="Ecrire votre Lieu De Naissance " formControlName="lieu_de_naissance"></ion-input>
+        <small *ngIf="clientParForm.controls['lieu_de_naissance'].errors && clientParForm.controls['lieu_de_naissance'].touched" class="ion-color-danger">
+          le lieu de naissance est obligatoire
+        </small>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Profession:</ion-label>
+        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="profession"></ion-input>
+        <small *ngIf="clientParForm.controls['profession'].errors && clientParForm.controls['profession'].touched" class="ion-color-danger">
+          la profession est obligatoire
+        </small>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Statut:</ion-label>
+        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="status"></ion-input>
+        <small *ngIf="clientParForm.controls['status'].errors && clientParForm.controls['status'].touched" class="ion-color-danger">
+          le statut est obligatoire
+        </small>
+      </ion-item>
+    <!--  <ion-item>
+        <ion-label position="floating"> Veuillez Scannez votre Carte d'identité : </ion-label>
+        <ion-input type="file" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating"> Veuillez Scannez votre pièce Justitficatif:  </ion-label>
+        <ion-input type="file" ></ion-input>
+      </ion-item>-->
+      <ion-button class="cp-btn" [disabled]="!clientParForm.valid">
+        Register
+      </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

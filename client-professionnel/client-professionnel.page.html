@@ -1,0 +1,39 @@
+<ion-content class="cpro-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>S'inscrire</h1>
+      </div>
+      <form [formGroup]="clientProForm">
+      <ion-item>
+        <ion-label position="floating"> Matricule Fiscale:</ion-label>
+        <ion-input placeholder="Ecrire votre matricule" formControlName="matricule_fiscale"></ion-input>
+        <small *ngIf="clientProForm.controls['matricule_fiscale'].errors && clientProForm.controls['matricule_fiscale'].touched" class="ion-color-danger">
+          Veuillez entrez votre matricule fiscale
+        </small>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Raison Social :</ion-label>
+        <ion-input placeholder="Ecrire votre raison social" formControlName="raison_social"></ion-input>
+        <small *ngIf="clientProForm.controls['raison_social'].errors && clientProForm.controls['raison_social'].touched" class="ion-color-danger">
+          Veuillez entrez votre raison social
+        </small>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Numéro Registre Commerce :</ion-label>
+        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="numero_registre_commerce"></ion-input>
+        <small *ngIf="clientProForm.controls['raison_social'].errors && clientProForm.controls['raison_social'].touched" class="ion-color-danger">
+           Veuillez entrez votre numéro de registre commercial
+        </small>
+      </ion-item>
+      <ion-button class="cpr-btn" [disabled]="!this.clientProForm.valid">
+        Register
+      </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

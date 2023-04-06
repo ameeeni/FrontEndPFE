@@ -1,0 +1,23 @@
+ion-menu::part(backdrop) {
+  background-color: rgba(	254,	195	,33, 0.5);
+}
+
+ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+
+  box-shadow: 4px 0px 16px rgba(224,172,29, 0.18);
+}
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+ion-title{
+  color: white;
+}
+.submenu-title {
+  color:#bec0c7;
+  margin-top:15px;
+  margin-left:0;
+  margin-right: 0;
+  font-size: 15px;
+  margin-bottom: 0;
+}

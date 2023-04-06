@@ -1,0 +1,34 @@
+<ion-content class="authenticate-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="authenticate-title">
+        <h1>S'authentifier</h1>
+      </div>
+      <form [formGroup]="userFormGroup" (ngSubmit)="handleSubmit()" >
+      <ion-item>
+        <ion-label position="floating">Email :</ion-label>
+        <ion-input placeholder="Ecrire votre e-mail" formControlName="email"></ion-input>
+        <small *ngIf="userFormGroup.controls['email'].errors && userFormGroup.controls['email'].touched" class="ion-color-danger">
+          l'email est obligatoire
+        </small>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Mot de passe :</ion-label>
+        <ion-input type="password" placeholder="Ecrire votre mot de passe" formControlName="password"></ion-input>
+        <small *ngIf="userFormGroup.controls['password'].errors && userFormGroup.controls['password'].touched" class="ion-color-danger">
+          le mot de passe est obligatoire
+        </small>
+      </ion-item>
+      <ion-button class="authenticate-btn" type="submit" [disabled]="!this.userFormGroup.valid">
+        S'authentifier
+      </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

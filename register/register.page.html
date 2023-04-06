@@ -1,0 +1,63 @@
+<ion-content class="register-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+ <ion-card>
+   <ion-card-content class="card-content">
+     <div class="register-title">
+       <h1>S'inscrire</h1>
+     </div>
+     <form [formGroup]="registerFormGroup">
+     <ion-item>
+       <ion-label position="floating">Nom :</ion-label>
+       <ion-input placeholder="Ecrire votre nom" formControlName="firstname"></ion-input>
+       <small *ngIf="registerFormGroup.controls['firstname'].errors && registerFormGroup.controls['firstname'].touched" class="ion-color-danger">
+         le nom est obligatoire
+       </small>
+     </ion-item>
+     <ion-item>
+       <ion-label position="floating">Prénom :</ion-label>
+       <ion-input placeholder="Ecrire votre prénom" formControlName="lastname"></ion-input>
+       <small *ngIf="registerFormGroup.controls['lastname'].errors && registerFormGroup.controls['lastname'].touched" class="ion-color-danger">
+         le prénom est obligatoire
+       </small>
+     </ion-item>
+     <ion-item>
+       <ion-label position="floating">Email :</ion-label>
+       <ion-input placeholder="Ecrire votre e-mail" formControlName="email"></ion-input>
+       <small *ngIf="registerFormGroup.controls['email'].errors && registerFormGroup.controls['email'].touched" class="ion-color-danger">
+         l'email est obligatoire
+       </small>
+     </ion-item>
+     <ion-item>
+       <ion-label position="floating">Numéro de téléphone :</ion-label>
+       <ion-input type="number" placeholder="Ecrire votre numéro" formControlName="phone"></ion-input>
+       <small *ngIf="registerFormGroup.controls['phone'].errors && registerFormGroup.controls['phone'].touched" class="ion-color-danger">
+         le numéro est obligatoire
+       </small>
+     </ion-item>
+     <ion-item>
+       <ion-label position="floating">Mot de passe :</ion-label>
+       <ion-input type="password" placeholder="Ecrire votre mot de passe" formControlName="password"></ion-input>
+       <small *ngIf="registerFormGroup.controls['password'].errors && registerFormGroup.controls['password'].touched" class="ion-color-danger">
+         le mot de passe est obligatoire
+       </small>
+     </ion-item>
+     <ion-item>
+       <ion-label position="floating">Réécrivez votre mot de passe :</ion-label>
+       <ion-input type="password" placeholder="Réécrire votre mot de passe" formControlName="reValidpassword"></ion-input>
+       <small *ngIf="registerFormGroup.controls['reValidpassword'].errors && registerFormGroup.controls['reValidpassword'].touched" class="ion-color-danger">
+          Veuillez réécrivez votre mot de passe
+       </small>
+     </ion-item>
+     <ion-button   class="register-btn" href="/client-professionnel">
+       Client Professionnel
+     </ion-button>
+     <p class="choose"> Ou </p>
+     <ion-button class="register-btn" href="/client-particulier" >
+       Client Particulier
+     </ion-button>
+     </form>
+   </ion-card-content>
+ </ion-card>
+</ion-content>
