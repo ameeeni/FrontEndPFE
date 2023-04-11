@@ -9,12 +9,15 @@ import { ConsulterMesComptesPageRoutingModule } from './consulter-mes-comptes-ro
 import { ConsulterMesComptesPage } from './consulter-mes-comptes.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ConsulterMesComptesPageRoutingModule
-  ],
-  declarations: [ConsulterMesComptesPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ConsulterMesComptesPageRoutingModule
+    ],
+    exports: [
+        ConsulterMesComptesPage
+    ],
+    declarations: [ConsulterMesComptesPage]
 })
 export class ConsulterMesComptesPageModule {}

@@ -46,9 +46,9 @@ ion-accordion.accordion-expanding ion-item[slot="header"]  {
 /*.accordion-icon {
   --color: #000;
 }*/
-ion-accordion.accordion-expanded.ion-icon ,
-ion-accordion.accordion-expanding.ion-icon {
-  --background: #fff;
+ion-accordion.accordion-expanded .icon-accor ,
+ion-accordion.accordion-expanding .icon-accor {
+--color: #fff;
 }
 
 

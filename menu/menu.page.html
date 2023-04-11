@@ -1,5 +1,6 @@
 
 <ion-app>
+  <router-outlet></router-outlet>
   <ion-menu contentId="main-content">
     <ion-header  class="ion-toolbar-menu">
       <ion-toolbar >
@@ -12,7 +13,7 @@
          <ion-icon  [name]="item.icon" class="icon-accor" style="margin-right: 10px;"></ion-icon>
           <ion-label>{{item.title}}</ion-label>
         </ion-item>
-        <div class="ion-padding" slot="content" *ngFor="let i of item.children" >
+        <div class="ion-padding" slot="content" *ngFor="let i of item.children" (click)="onMenuItem(i)">
           {{i.title}}
         </div>
       </ion-accordion>
@@ -31,7 +32,7 @@
           </ion-menu-button>
         </ion-buttons>
   </div>
-
 </ion-app>
+
 
 
