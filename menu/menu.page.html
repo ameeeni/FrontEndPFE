@@ -1,21 +1,37 @@
+
 <ion-app>
   <ion-menu contentId="main-content">
     <ion-header  class="ion-toolbar-menu">
       <ion-toolbar >
-        <ion-title>MyPosteBank</ion-title>
+        <ion-title class="menu-title">MyPosteBank</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content>
-      <ion-title class="submenu-title">COMPTES & STATICTIQUES</ion-title>
-    </ion-content>
-
-   <ion-item>
-
-   </ion-item>
+    <ion-accordion-group>
+      <ion-accordion *ngFor="let item of pages" class="ion-content" >
+        <ion-item  slot="header" >
+         <ion-icon  [name]="item.icon" class="icon-accor" style="margin-right: 10px;"></ion-icon>
+          <ion-label>{{item.title}}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content" *ngFor="let i of item.children" >
+          {{i.title}}
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+   <ion-content class="info-content">
+    <!-- <ion-title class="info-title">Infos Utiles</ion-title> -->
+     <ion-list  lines="full" *ngFor="let i of infos">
+       <ion-item class="info-item"> {{i.title}}</ion-item>
+     </ion-list>
+   </ion-content>
   </ion-menu>
+
   <div class="ion-page" id="main-content">
         <ion-buttons slot="start">
-          <ion-menu-button></ion-menu-button>
+          <ion-menu-button>
+          </ion-menu-button>
         </ion-buttons>
   </div>
+
 </ion-app>
+
+
