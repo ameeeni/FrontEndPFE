@@ -7,38 +7,80 @@
       <div class="register-title">
         <h1>S'inscrire</h1>
       </div>
-      <form [formGroup]="clientParForm" >
+      <form [formGroup]="clientParForm"  (ngSubmit)="RegisterClientPar()" >
+        <ion-item>
+          <ion-label position="floating">Nom :</ion-label>
+          <ion-input placeholder="Ecrire votre nom" formControlName="firstname" [(ngModel)]="clientPar.nom"></ion-input>
+          <small *ngIf="clientParForm.controls['firstname'].errors && clientParForm.controls['firstname'].touched" class="ion-color-danger">
+            le nom est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Prénom :</ion-label>
+          <ion-input placeholder="Ecrire votre prénom" formControlName="lastname" [(ngModel)]="clientPar.prenom"></ion-input>
+          <small *ngIf="clientParForm.controls['lastname'].errors && clientParForm.controls['lastname'].touched" class="ion-color-danger">
+            le prénom est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email :</ion-label>
+          <ion-input placeholder="Ecrire votre e-mail" formControlName="email" [(ngModel)]="clientPar.email"></ion-input>
+          <small *ngIf="clientParForm.controls['email'].errors && clientParForm.controls['email'].touched" class="ion-color-danger">
+            l'email est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Numéro de téléphone :</ion-label>
+          <ion-input type="number" placeholder="Ecrire votre numéro" formControlName="phone" [(ngModel)]="clientPar.phone"></ion-input>
+          <small *ngIf="clientParForm.controls['phone'].errors && clientParForm.controls['phone'].touched" class="ion-color-danger">
+            le numéro est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Mot de passe :</ion-label>
+          <ion-input type="password" placeholder="Ecrire votre mot de passe" formControlName="mot_de_passe" [(ngModel)]="clientPar.mot_de_passe"></ion-input>
+          <small *ngIf="clientParForm.controls['mot_de_passe'].errors && clientParForm.controls['mot_de_passe'].touched" class="ion-color-danger" >
+            le mot de passe est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Réécrivez votre mot de passe :</ion-label>
+          <ion-input type="password" placeholder="Réécrire votre mot de passe" formControlName="reValidpassword"></ion-input>
+          <small *ngIf="clientParForm.controls['reValidpassword'].errors && clientParForm.controls['reValidpassword'].touched" class="ion-color-danger" >
+            Veuillez réécrivez votre mot de passe
+          </small>
+        </ion-item>
       <ion-item>
         <ion-label position="floating"> CIN</ion-label>
-        <ion-input placeholder="Ecrire votre CIN" formControlName="cin"></ion-input>
-        <small *ngIf="clientParForm.controls['cin'].errors && clientParForm.controls['cin'].touched" class="ion-color-danger">
+        <ion-input placeholder="Ecrire votre CIN" formControlName="cin" [(ngModel)]="clientPar.CIN"></ion-input>
+        <small *ngIf="clientParForm.controls['cin'].errors && clientParForm.controls['cin'].touched" class="ion-color-danger" >
           le CIN est obligatoire
         </small>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Date de Naissance :</ion-label>
-        <ion-input type="date" placeholder="Ecrire votre Date de Naissance" formControlName="date_de_naissance"></ion-input>
+        <ion-input type="date" placeholder="Ecrire votre Date de Naissance" formControlName="date_de_naissance" [(ngModel)]="clientPar.date_de_naissance"></ion-input>
         <small *ngIf="clientParForm.controls['date_de_naissance'].errors && clientParForm.controls['date_de_naissance'].touched" class="ion-color-danger">
           la date de naissance est obligatoire
         </small>
       </ion-item>
       <ion-item>
         <ion-label position="floating"> Lieu De Naissance :</ion-label>
-        <ion-input placeholder="Ecrire votre Lieu De Naissance " formControlName="lieu_de_naissance"></ion-input>
-        <small *ngIf="clientParForm.controls['lieu_de_naissance'].errors && clientParForm.controls['lieu_de_naissance'].touched" class="ion-color-danger">
+        <ion-input placeholder="Ecrire votre Lieu De Naissance " formControlName="lieu_de_naissance" [(ngModel)]="clientPar.lieu_de_naissance"></ion-input>
+        <small *ngIf="clientParForm.controls['lieu_de_naissance'].errors && clientParForm.controls['lieu_de_naissance'].touched" class="ion-color-danger" >
           le lieu de naissance est obligatoire
         </small>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Profession:</ion-label>
-        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="profession"></ion-input>
+        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="profession" [(ngModel)]="clientPar.profession"></ion-input>
         <small *ngIf="clientParForm.controls['profession'].errors && clientParForm.controls['profession'].touched" class="ion-color-danger">
           la profession est obligatoire
         </small>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Statut:</ion-label>
-        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="status"></ion-input>
+        <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="status" [(ngModel)]="clientPar.status"></ion-input>
         <small *ngIf="clientParForm.controls['status'].errors && clientParForm.controls['status'].touched" class="ion-color-danger">
           le statut est obligatoire
         </small>
@@ -51,9 +93,10 @@
         <ion-label position="floating"> Veuillez Scannez votre pièce Justitficatif:  </ion-label>
         <ion-input type="file" ></ion-input>
       </ion-item>-->
-      <ion-button class="cp-btn" [disabled]="!clientParForm.valid">
+      <ion-button type="submit" class="cp-btn" [disabled]="!clientParForm.valid">
         Register
       </ion-button>
+
       </form>
     </ion-card-content>
   </ion-card>
