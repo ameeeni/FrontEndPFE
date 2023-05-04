@@ -37,7 +37,27 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },{
+    path: 'nouveauCompte',
+    loadChildren: () => import('./nouveau-compte/nouveau-compte.module').then( m => m.NouveauComptePageModule)
   },
+  {
+    path: 'identite-client',
+    loadChildren: () => import('./identite-client/identite-client.module').then( m => m.IdentiteClientPageModule)
+  },
+  {
+    path: 'informations-perso',
+    loadChildren: () => import('./informations-perso/informations-perso.module').then( m => m.InformationsPersoPageModule)
+  },
+  {
+    path: 'documents-perso',
+    loadChildren: () => import('./documents-perso/documents-perso.module').then( m => m.DocumentsPersoPageModule)
+  },
+  {
+    path: 'prise-rendez-vous',
+    loadChildren: () => import('./prise-rendez-vous/prise-rendez-vous.module').then( m => m.PriseRendezVousPageModule)
+  },
+
 
 ];
 

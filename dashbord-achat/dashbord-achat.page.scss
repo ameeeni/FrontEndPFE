@@ -1,0 +1,90 @@
+
+.dashboard-content{
+  z-index:-100000;
+  margin-bottom: 50px;
+}
+.chart-container{
+  padding:0;
+}
+.monthly-depenses {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: space-between;
+  margin-top: 20px; margin-bottom: 15px;
+}
+.dépense-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+.dépense-mois{
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  flex-direction: column;
+}
+
+.montant {
+  font-weight: bold;
+  color:black;
+  font-size: 20px;
+  padding: 0;
+
+}
+.titre-de-depense{
+  font-size: 12px;
+  color: #0e1254;
+}
+.categories-content{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+
+}
+.list-category-item {
+  padding-top:10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+ion-list{
+  padding-top:0;
+}
+.progress-wrapper {
+  width: 95%;
+  color: #fff;
+  margin: 15px 2.5%;
+  text-align: center;
+  background-color: #f7f7f7;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.progress-bar {
+  padding: 4px;
+  min-width: 10%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #FEC321;
+  transition: 2s linear;
+  transition-property: width, background-color;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+.list-category-item-content-percentage {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: start;
+  align-self: normal;
+}
+ion-list {
+
+}

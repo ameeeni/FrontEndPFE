@@ -11,10 +11,10 @@ const routes: Routes = [
       {
         path: 'consulterComptes',
         loadChildren: () => import('../consulter-mes-comptes/consulter-mes-comptes.module').then( m => m.ConsulterMesComptesPageModule)
-      },{
+      },/*{
         path: 'nouveauCompte',
         loadChildren: () => import('../nouveau-compte/nouveau-compte.module').then( m => m.NouveauComptePageModule)
-      }, {
+      },*/ {
         path: 'importerCompte',
         loadChildren: () => import('../importer-comptes/importer-comptes.module').then( m => m.ImporterComptesPageModule)
       }, {

@@ -1,3 +1,7 @@
+ion-app{
+  z-index: 100000;
+}
+
 ion-menu::part(backdrop) {
   background-color: rgba(	254,	195	,33, 0.5);
 }

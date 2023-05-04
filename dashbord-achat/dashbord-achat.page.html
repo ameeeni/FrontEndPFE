@@ -1,13 +1,77 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>dashbord-achat</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dashbord-achat</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<div class="container">
+  <div class="dashboard-content">
+    <ion-card>
+      <ion-card-content>
+       <div class="chart-container" style="position: relative; height:100%; width:100%;"><canvas id="myChart"></canvas></div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="monthly-depenses">
+  <div class="dépense-info">
+    <div class="dépense-moyenne">
+      <ion-title class="montant">1057.500 DT</ion-title>
+      <div class="titre-de-depense">Dépense Mensuelle Moyenne </div>
+    </div>
+    <div class="dépense-mois">
+      <ion-title class="montant">1151.500 DT</ion-title>
+      <div class="titre-de-depense">Dépense de ce mois-ci</div>
+    </div>
+  </div>
+  </div>
+  <div  class="categories-content">
+    <ion-list lines="none">
+      <div class="list-category-item">
+        <div class="list-category-item-content-progress">
+          <ion-label>Non Catégorisé </ion-label>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="70+ '%'" style="background-color: #0e1254;" >
+            </div>
+          </div>
+        </div>
+        <div class="list-category-item-content-percentage">
+          <ion-label> 463.200 DT</ion-label>
+          <div style="font-weight: 800; margin-top: 5px;">70%</div>
+        </div>
+      </div>
+      <div class="list-category-item">
+        <div class="list-category-item-content-progress">
+          <ion-label> Shopping </ion-label>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="40+ '%'">
+            </div>
+          </div>
+        </div>
+        <div class="list-category-item-content-percentage">
+          <ion-label> 257.200 DT</ion-label>
+          <div style="font-weight: 800; margin-top: 5px;">40%</div>
+        </div>
+      </div>
+      <div class="list-category-item">
+        <div class="list-category-item-content-progress">
+          <ion-label>Factures </ion-label>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="30+ '%'">
+            </div>
+          </div>
+        </div>
+        <div class="list-category-item-content-percentage">
+          <ion-label> 222.500 DT</ion-label>
+          <div style="font-weight: 800; margin-top: 5px;">30%</div>
+        </div>
+      </div>
+      <div class="list-category-item">
+        <div class="list-category-item-content-progress">
+          <ion-label>Général</ion-label>
+          <div class="progress-wrapper">
+            <div class="progress-bar" [style.width]="20+ '%'">
+            </div>
+          </div>
+        </div>
+        <div class="list-category-item-content-percentage">
+          <ion-label> 195.600 DT</ion-label>
+          <div style="font-weight: 800; margin-top: 5px;">17%</div>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+</div>
