@@ -20,7 +20,7 @@ const routes: Routes = [
       }, {
         path: 'dashbordAchat',
         loadChildren: () => import('../dashbord-achat/dashbord-achat.module').then( m => m.DashbordAchatPageModule)
-      },
+      }
     ]
   }
 ];

@@ -20,7 +20,8 @@
    <ion-content class="info-content">
     <!-- <ion-title class="info-title">Infos Utiles</ion-title> -->
      <ion-list  lines="full" *ngFor="let i of infos">
-       <ion-item class="info-item"> {{i.title}}</ion-item>
+       <ion-item class="info-item" [href]="i.url"> {{i.title}}</ion-item>
+
      </ion-list>
    </ion-content>
   </ion-menu>

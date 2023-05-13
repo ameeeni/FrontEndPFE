@@ -93,6 +93,14 @@ const routes: Routes = [
     path: 'consulter-messagerie',
     loadChildren: () => import('./consulter-messagerie/consulter-messagerie.module').then( m => m.ConsulterMessageriePageModule)
   },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'cours-de-change',
+    loadChildren: () => import('./cours-de-change/cours-de-change.module').then( m => m.CoursDeChangePageModule)
+  },
 ];
 
 @NgModule({

@@ -77,12 +77,14 @@ export class MenuPage implements OnInit {
    infos = [
      {
        title : "Notifications",
+       url :'notifications'
      },
      {
        title : "Réseau Postal et file d'attente",
      },
      {
        title : "Cours de Change ",
+       url: 'cours-de-change'
      },
      {
        title : "A propos myPosteBank",
