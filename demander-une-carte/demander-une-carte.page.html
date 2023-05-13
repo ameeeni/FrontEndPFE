@@ -1,0 +1,58 @@
+<ion-content class="cpro-content">
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Le Nom sur la carte</h1>
+      </div>
+      <form>
+        <h2 style="text-align: center; color:black;">Ameni Bramli</h2>
+        <ion-item>
+          <ion-label position="floating">Numéro du compte:</ion-label>
+          <ion-input placeholder="Ecrire votre numéro du compte:"  type="number"></ion-input>
+
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Type de la carte</ion-label>
+          <ion-select aria-label="carte" placeholder="Choisir votre carte">
+            <ion-select-option value="carte" *ngFor="let c of carte">{{c}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Gouvernorat de bureau de contact:</ion-label>
+          <ion-select label-placement="floating" placeholder="Gouvernorat de Bureau de contact">
+            <ion-select-option *ngFor="let g of gouvernorat;" [value]="g">{{g}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">bureau de retrait:</ion-label>
+          <ion-select label-placement="floating" placeholder="Bureau de retrait:">
+            <ion-select-option *ngFor="let g of gouvernorat;" [value]="g">{{g}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-button type="submit" class="cpr-btn" id="open-modal">
+          Enregister la demande
+        </ion-button>
+      </form>
+      <ion-modal trigger="open-modal">
+        <ng-template>
+          <ion-content>
+            <ion-card>
+              <ion-card-content>
+                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                  <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="circle" d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/>
+                    <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>
+                  </g>
+                </svg>
+                Votre demande a bien été envoyée en succées vous vous recevez un appel téléphonique de chez La poste
+                ultérieurement.
+              </ion-card-content>
+              <ion-button href="menu/consulterComptes" style="display: block;">Acceuil</ion-button>
+            </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

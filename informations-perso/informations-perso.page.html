@@ -1,0 +1,87 @@
+<ion-content class="cp-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card style="margin-top: 155px;">
+    <ion-card-content>
+      <div class="register-title">
+        <h1>Informations Personnelles</h1>
+      </div>
+      <form [formGroup]="clientParForm">
+
+        <ion-item>
+          <ion-label position="floating">Nationalité:</ion-label>
+          <ion-select label-placement="floating"  multiple="true"  name="selectCountry"
+                      aria-label="Pays"
+                      [compareWith]="compareWith"
+                      placeholder="Select Nationalité"
+                      (ionChange)="handleChange($event)">
+            <ion-select-option *ngFor="let p of pays; " [value]="p"> {{p.nationnalite}}</ion-select-option>
+          </ion-select>
+          <div></div>
+          <small *ngIf="clientParForm.controls['nationalité'].errors && clientParForm.controls['nationalité'].touched"
+                 class="ion-color-danger">
+            la civilité est obligatoire
+          </small>
+        </ion-item>
+
+          <ion-item>
+          <ion-label position="floating">Pays de Résidance:</ion-label>
+          <ion-select  label-placement="floating"
+                      multiple="true"  name="selectCountry"
+                      [compareWith]="compareWith"
+                      placeholder="Select Nationalité"
+                      (ionChange)="handleChange($event)">
+            <ion-select-option *ngFor="let p of pays; " [value]="p">{{p.libelle}}</ion-select-option>
+          </ion-select>
+          <small *ngIf="clientParForm.controls['paysdeResi'].errors && clientParForm.controls['paysdeResi'].touched"
+                 class="ion-color-danger">
+            le pays de Résidance est obligatoire
+          </small>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label position="floating">Adresse: </ion-label>
+          <ion-input placeholder="Ecrire votre prénom" formControlName="adresse" ></ion-input>
+          <small *ngIf="clientParForm.controls['adresse'].errors && clientParForm.controls['adresse'].touched" class="ion-color-danger">
+            l'adresse est obligatoire
+          </small>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Statut : </ion-label>
+          <ion-select label-placement="floating" formControlName="status">
+            <ion-select-option value="apple">Divorsé(e)</ion-select-option>
+            <ion-select-option value="banana">Célibataire</ion-select-option>
+            <ion-select-option value="orange">Marié(e)</ion-select-option>
+          </ion-select>
+          <small *ngIf="clientParForm.controls['status'].errors && clientParForm.controls['status'].touched" class="ion-color-danger">
+            le nom est obligatoire
+          </small>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating"> Nombre d'enfants </ion-label>
+          <ion-input placeholder="Ecrire votre numéro carte" type="number" formControlName="nbEnf" ></ion-input>
+          <small *ngIf="clientParForm.controls['nbEnf'].errors && clientParForm.controls['nbEnf'].touched" class="ion-color-danger" >
+            le CIN est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Catégorie Professionelle:  </ion-label>
+          <ion-select  label-placement="floating" formControlName="CatégPro">
+            <ion-select-option *ngFor="let c of categProf">{{c}}</ion-select-option>
+          </ion-select>
+          <small *ngIf="clientParForm.controls['CatégPro'].errors && clientParForm.controls['CatégPro'].touched" class="ion-color-danger">
+            le Catégorie Professionnelle est obligatoire
+          </small>
+        </ion-item>
+
+      </form>
+      <ion-button type="submit" class="cp-btn" href="/documents-perso">
+        Suivant
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

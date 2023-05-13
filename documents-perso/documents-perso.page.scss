@@ -1,0 +1,43 @@
+.register-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--ion-color-primary);
+  font-weight: 800;
+}
+.cp-content{
+  --background: var(--ion-color-primary);
+}
+ion-card {
+
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.cp-btn{
+  --background: var(--ion-color-colapp);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.starting-image {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-laposte{
+  height:70px;
+  width: 70px;
+}
+ion-title{
+  font-weight: bold;
+  color:black;
+  padding :0;
+}
+.items-list{
+  display: flex;
+}
+.content-list {
+  margin-left:20px;
+  margin-top:10px;
+}

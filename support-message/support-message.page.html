@@ -1,0 +1,53 @@
+<ion-content class="cp-content">
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Informations Personnelles</h1>
+      </div>
+      <form>
+        <ion-item>
+          <ion-label position="floating">Objet</ion-label>
+          <ion-select label-placement="floating"  multiple="true"  name="selectCountry"
+                      aria-label="Pays"
+                      [compareWith]="compareWith"
+                      placeholder="Select L'objet "
+                      (ionChange)="handleChange($event)">
+            <ion-select-option *ngFor="let o of objets; " [value]="o"> {{o}}</ion-select-option>
+          </ion-select>
+          <div></div>
+        </ion-item>
+        <ion-item>
+          <ion-textarea
+            placeholder="Ecrire votre message !"
+            [clearOnEdit]="true"
+          ></ion-textarea>
+        </ion-item>
+
+      </form>
+      <ion-modal trigger="open-modal">
+        <ng-template>
+          <ion-content>
+            <ion-card>
+              <ion-card-content>
+                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                  <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="circle" d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/>
+                    <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>
+                  </g>
+                </svg>
+                Votre demande a bien été envoyée en succées vous vous recevez un appel téléphonique de chez La poste
+                ultérieurement.
+              </ion-card-content>
+              <ion-button href="menu/consulterComptes" style="display: block;">Acceuil</ion-button>
+            </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+      <ion-button type="submit" class="cp-btn"
+                  id="open-modal">
+       Envoyer un message!
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

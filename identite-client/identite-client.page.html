@@ -1,0 +1,82 @@
+<ion-content class="cp-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Identité du Client</h1>
+      </div>
+        <form [formGroup]="clientParForm">
+
+            <ion-item>
+              <ion-label position="floating">Civilité :</ion-label>
+              <ion-select label="Civilité" label-placement="floating" formControlName="civilité">
+                <ion-select-option value="apple">M.</ion-select-option>
+                <ion-select-option value="banana">Mme.</ion-select-option>
+                <ion-select-option value="orange">Mlle.</ion-select-option>
+              </ion-select>
+              <small *ngIf="clientParForm.controls['civilité'].errors && clientParForm.controls['civilité'].touched" class="ion-color-danger">
+                le nom est obligatoire
+              </small>
+            </ion-item>
+          <ion-item>
+            <ion-label position="floating">Nom : </ion-label>
+            <ion-input placeholder="Ecrire votre nom" formControlName="lastname" ></ion-input>
+            <small *ngIf="clientParForm.controls['firstname'].errors && clientParForm.controls['firstname'].touched" class="ion-color-danger">
+              le prénom est obligatoire
+            </small>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Prénom :</ion-label>
+            <ion-input placeholder="Ecrire votre prénom" formControlName="lastname" ></ion-input>
+            <small *ngIf="clientParForm.controls['lastname'].errors && clientParForm.controls['lastname'].touched" class="ion-color-danger">
+              le prénom est obligatoire
+            </small>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email :</ion-label>
+            <ion-input placeholder="Ecrire votre e-mail" formControlName="email" ></ion-input>
+            <small *ngIf="clientParForm.controls['email'].errors && clientParForm.controls['email'].touched" class="ion-color-danger">
+              l'email est obligatoire
+            </small>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Numéro de téléphone :</ion-label>
+            <ion-input type="number" placeholder="Ecrire votre numéro" formControlName="phone" ></ion-input>
+            <small *ngIf="clientParForm.controls['phone'].errors && clientParForm.controls['phone'].touched" class="ion-color-danger">
+              le numéro est obligatoire
+            </small>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Choisir Carte d'identité/ carte Séjour</ion-label>
+            <ion-select label="carte" label-placement="floating" formControlName="carte">
+              <ion-select-option value="carte identite">Carte d'identité</ion-select-option>
+              <ion-select-option value="carte sejour">Carte séjour</ion-select-option>
+            </ion-select>
+            <small *ngIf="clientParForm.controls['carte'].errors && clientParForm.controls['carte'].touched" class="ion-color-danger" >
+              choisir un choix est obligatoire
+            </small>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating"> Numéro de la carte:</ion-label>
+            <ion-input placeholder="Ecrire votre numéro carte" formControlName="cin" ></ion-input>
+            <small *ngIf="clientParForm.controls['cin'].errors && clientParForm.controls['cin'].touched" class="ion-color-danger" >
+              le CIN est obligatoire
+            </small>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Date de Naissance :</ion-label>
+            <ion-input type="date" placeholder="Ecrire votre Date de Naissance" formControlName="date_de_naissance" ></ion-input>
+            <small *ngIf="clientParForm.controls['date_de_naissance'].errors && clientParForm.controls['date_de_naissance'].touched" class="ion-color-danger">
+              la date de naissance est obligatoire
+            </small>
+          </ion-item>
+      </form>
+      <ion-button type="submit" class="cp-btn" href="/informations-perso">
+        Suivant
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

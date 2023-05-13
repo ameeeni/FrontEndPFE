@@ -1,0 +1,20 @@
+.carte-content {
+  dipslay:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+
+}
+.button-carte {
+  --padding:10px;
+  margin-top:20px;
+ --background: var(--ion-color-colapp);
+  color:white;
+  text-align: center;
+  border-radius: 8px;
+}

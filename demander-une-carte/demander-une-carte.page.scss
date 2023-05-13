@@ -1,0 +1,74 @@
+.register-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--ion-color-primary);
+  font-weight: 800;
+}
+
+.cpro-content{
+  --background: var(--ion-color-primary);
+}
+ion-card {
+  margin-top: 100px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.cpr-btn{
+  --background: var(--ion-color-colapp);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.starting-image {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-laposte{
+  height:70px;
+  width: 70px;
+}
+ion-modal{
+  --background: rgba(44,93,45,0.2);
+  &::part(content){
+    backdrop-filter: blur(6px);
+  }
+  ion-content{
+    --background: transparent;
+    --padding-top:10vh;
+    --padding-start:5px;
+    --padding-end:5px;
+    text-align: center;
+  }
+}
+$size: 40vw;
+$color:#FEC321;
+
+svg {
+  display: block;
+  margin-left: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: $size;
+  width: $size;
+  color: $color; /* SVG path use currentColor to inherit this */
+}
+
+.circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 1s forwards;
+}
+
+.tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 1s forwards 1s;
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0 }
+}
+

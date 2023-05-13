@@ -1,0 +1,46 @@
+<ion-content class="cp-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Documents Personnels</h1>
+      </div>
+      <form style="margin-top: 15px;">
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Recto</ion-label>
+      <ion-item>
+        <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+        <ion-input type="file"  id="file-input1" accept="image/png, image/jpeg"></ion-input>
+      </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Verso</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+          <ion-input type="file"  id="file-input2" accept="image/png, image/jpeg"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justification de revenu</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+          <ion-input type="file"  id="file-input3" accept="image/png, image/jpeg"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justificatif Compte Postal</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+          <ion-input type="file"  id="file-input4" accept="image/png, image/jpeg"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justification d'adresse</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+          <ion-input type="file"  id="file-input5" accept="image/png, image/jpeg"></ion-input>
+        </ion-item>
+      </form>
+      <ion-item style="margin-top: 10px;">Pour que nous puissions vérifier votre identité, veuillez prendre un selfie en tenant dans votre main votre carte d'identité comme indiqué dans la photo. Votre image sera utilisée exlusivement par la Poste Tunisienne pour la sécurisation de l'opération d'inscription aux services de MyPosteBank.</ion-item>
+      <ion-item style="--background: var(--ion-color-primary); color: white;
+   margin-top: 10px; border-radius: 8px;">Cliquez ici pour prendre  un selfie  avec la carte d'identité</ion-item>
+      <ion-button type="submit" class="cp-btn" href="/prise-rendez-vous">
+        Suivant
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

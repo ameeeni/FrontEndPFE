@@ -37,11 +37,11 @@ export class MenuPage implements OnInit {
       children: [
         {
           title:'Virements ',
-          url :'menu/consulterComptes',
+          url :'virements',
           icon:'briefcase-outline'
         }, {
           title:'Cartes ',
-          url :'menu/dashbordAchat',
+          url :'cartes',
           icon:'briefcase-outline'
         }
       ]
@@ -51,11 +51,11 @@ export class MenuPage implements OnInit {
       children: [
         {
           title:'Informations Personnelles ',
-          url :'menu/consulterComptes',
+          url :'modification-informations-perso',
           icon:'briefcase-outline'
         }, {
           title:'Changer le mot de passe ',
-          url :'menu/dashbordAchat',
+          url :'changer-mot-de-passe',
           icon:'briefcase-outline'
         }
       ]
@@ -66,8 +66,10 @@ export class MenuPage implements OnInit {
       children: [
         {
           title:'Envoyer un message au Support ',
+          url :'support-message',
         }, {
-          title:'Consulter mes Messages'
+          title:'Consulter mes Messages' ,
+          url:'consulter-messagerie'
         }
       ]
     }

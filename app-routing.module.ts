@@ -57,8 +57,42 @@ const routes: Routes = [
     path: 'prise-rendez-vous',
     loadChildren: () => import('./prise-rendez-vous/prise-rendez-vous.module').then( m => m.PriseRendezVousPageModule)
   },
-
-
+  {
+    path: 'cartes',
+    loadChildren: () => import('./cartes/cartes.module').then( m => m.CartesPageModule)
+  },
+  {
+    path: 'demander-une-carte',
+    loadChildren: () => import('./demander-une-carte/demander-une-carte.module').then( m => m.DemanderUneCartePageModule)
+  },
+  {
+    path: 'virements',
+    loadChildren: () => import('./virements/virements.module').then( m => m.VirementsPageModule)
+  },
+  {
+    path: 'ordonner-un-virement',
+    loadChildren: () => import('./ordonner-un-virement/ordonner-un-virement.module').then( m => m.OrdonnerUnVirementPageModule)
+  },
+  {
+    path: 'beneficiaires',
+    loadChildren: () => import('./beneficiaires/beneficiaires.module').then( m => m.BeneficiairesPageModule)
+  },
+  {
+    path: 'modification-informations-perso',
+    loadChildren: () => import('./modification-informations-perso/modification-informations-perso.module').then( m => m.ModificationInformationsPersoPageModule)
+  },
+  {
+    path: 'changer-mot-de-passe',
+    loadChildren: () => import('./changer-mot-de-passe/changer-mot-de-passe.module').then( m => m.ChangerMotDePassePageModule)
+  },
+  {
+    path: 'support-message',
+    loadChildren: () => import('./support-message/support-message.module').then( m => m.SupportMessagePageModule)
+  },
+  {
+    path: 'consulter-messagerie',
+    loadChildren: () => import('./consulter-messagerie/consulter-messagerie.module').then( m => m.ConsulterMessageriePageModule)
+  },
 ];
 
 @NgModule({
