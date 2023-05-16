@@ -101,6 +101,18 @@ const routes: Routes = [
     path: 'cours-de-change',
     loadChildren: () => import('./cours-de-change/cours-de-change.module').then( m => m.CoursDeChangePageModule)
   },
+  {
+    path: 'apropos',
+    loadChildren: () => import('./apropos/apropos.module').then( m => m.AproposPageModule)
+  },
+  {
+    path: 'comment-ca-marche',
+    loadChildren: () => import('./comment-ca-marche/comment-ca-marche.module').then( m => m.CommentCaMarchePageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  },
 ];
 
 @NgModule({

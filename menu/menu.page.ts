@@ -88,11 +88,14 @@ export class MenuPage implements OnInit {
      },
      {
        title : "A propos myPosteBank",
+       url:'apropos'
      },
      {
        title : "Comment ça marche",
+       url:'comment-ca-marche'
      },{
        title : "FAQ",
+       url:"faq"
      }
    ]
 
