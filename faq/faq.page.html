@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-item style="padding-top: 15px; --background: var(--ion-color-primary); background-color:#10155F; ">
+    <ion-title style="--color:white;">FAQ </ion-title>
+  </ion-item>
+  <div class="text-message">
+    <ion-accordion-group>
+      <ion-accordion *ngFor="let item of quesRep" class="ion-content" >
+        <ion-item  slot="header" >
+          <ion-label>{{item.que}}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content" *ngFor="let item of quesRep">
+          {{item.rep}}
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+  <ion-button style="float: right; float: bottom;margin-top: 15px; margin-right: 15px;" href="menu/consulterComptes">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
+</ion-content>

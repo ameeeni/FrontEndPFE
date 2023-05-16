@@ -16,17 +16,15 @@ export class IdentiteClientPage implements OnInit {
 
   ngOnInit() {
     this.clientParForm = this.fb.group({
-      civilité : this.fb.control('' ,[Validators.required]),
       firstname : this.fb.control('' , [Validators.required]),
       lastname: this.fb.control('' , [Validators.required]),
       email : this.fb.control('', [Validators.required , Validators.email]),
       phone: this.fb.control('', [Validators.required , Validators.maxLength(8)]),
       cin : this.fb.control('' , [Validators.required]),
       date_de_naissance : this.fb.control('', [Validators.required]),
-      carte : this.fb.control('', [Validators.required])
-
-
+      lieu_de_naissance : this.fb.control('', [Validators.required])
   })
+
   }
   RegisterClientPar() {
     this._service.RegisterFromClientPar(this.clientPar).subscribe({

@@ -15,9 +15,6 @@ const routes: Routes = [
         path: 'nouveauCompte',
         loadChildren: () => import('../nouveau-compte/nouveau-compte.module').then( m => m.NouveauComptePageModule)
       },*/ {
-        path: 'importerCompte',
-        loadChildren: () => import('../importer-comptes/importer-comptes.module').then( m => m.ImporterComptesPageModule)
-      }, {
         path: 'dashbordAchat',
         loadChildren: () => import('../dashbord-achat/dashbord-achat.module').then( m => m.DashbordAchatPageModule)
       }

@@ -41,3 +41,44 @@ ion-title{
   margin-left:20px;
   margin-top:10px;
 }
+ion-modal{
+  --background: rgba(44,93,45,0.2);
+  &::part(content){
+    backdrop-filter: blur(6px);
+  }
+  ion-content{
+    --background: transparent;
+    --padding-top:25vh;
+    --padding-start:10px;
+    --padding-end:10px;
+  }
+}
+
+$size: 40vw;
+$color:#FEC321;
+
+svg {
+  display: block;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: $size;
+  width: $size;
+  color: $color; /* SVG path use currentColor to inherit this */
+}
+
+.circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 1s forwards;
+}
+
+.tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 1s forwards 1s;
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0 }
+}

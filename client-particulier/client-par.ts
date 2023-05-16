@@ -9,6 +9,7 @@ export class ClientPar {
   lieu_de_naissance !: string;
   profession !: string;
   status !:string;
+
  constructor() {
  }
 }

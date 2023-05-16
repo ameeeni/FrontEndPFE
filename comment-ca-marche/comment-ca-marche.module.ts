@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ImporterComptesPageRoutingModule } from './importer-comptes-routing.module';
+import { CommentCaMarchePageRoutingModule } from './comment-ca-marche-routing.module';
 
-import { ImporterComptesPage } from './importer-comptes.page';
+import { CommentCaMarchePage } from './comment-ca-marche.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ImporterComptesPageRoutingModule
+    CommentCaMarchePageRoutingModule
   ],
-  declarations: [ImporterComptesPage]
+  declarations: [CommentCaMarchePage]
 })
-export class ImporterComptesPageModule {}
+export class CommentCaMarchePageModule {}

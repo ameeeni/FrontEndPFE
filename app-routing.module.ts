@@ -54,10 +54,6 @@ const routes: Routes = [
     loadChildren: () => import('./documents-perso/documents-perso.module').then( m => m.DocumentsPersoPageModule)
   },
   {
-    path: 'prise-rendez-vous',
-    loadChildren: () => import('./prise-rendez-vous/prise-rendez-vous.module').then( m => m.PriseRendezVousPageModule)
-  },
-  {
     path: 'cartes',
     loadChildren: () => import('./cartes/cartes.module').then( m => m.CartesPageModule)
   },
@@ -73,10 +69,7 @@ const routes: Routes = [
     path: 'ordonner-un-virement',
     loadChildren: () => import('./ordonner-un-virement/ordonner-un-virement.module').then( m => m.OrdonnerUnVirementPageModule)
   },
-  {
-    path: 'beneficiaires',
-    loadChildren: () => import('./beneficiaires/beneficiaires.module').then( m => m.BeneficiairesPageModule)
-  },
+
   {
     path: 'modification-informations-perso',
     loadChildren: () => import('./modification-informations-perso/modification-informations-perso.module').then( m => m.ModificationInformationsPersoPageModule)
@@ -97,9 +90,22 @@ const routes: Routes = [
     path: 'notifications',
     loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
+
   {
-    path: 'cours-de-change',
-    loadChildren: () => import('./cours-de-change/cours-de-change.module').then( m => m.CoursDeChangePageModule)
+    path: 'apropos',
+    loadChildren: () => import('./apropos/apropos.module').then( m => m.AproposPageModule)
+  },
+  {
+    path: 'comment-ca-marche',
+    loadChildren: () => import('./comment-ca-marche/comment-ca-marche.module').then( m => m.CommentCaMarchePageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  },
+  {
+    path: 'documents-personnelle-inscrire',
+    loadChildren: () => import('./documents-personnelle-inscrire/documents-personnelle-inscrire.module').then( m => m.DocumentsPersonnelleInscrirePageModule)
   },
 ];
 

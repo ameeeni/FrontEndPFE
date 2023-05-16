@@ -5,33 +5,33 @@
   <ion-card>
     <ion-card-content class="card-content">
       <div class="register-title">
-        <h1>Documents Personnels</h1>
+        <h1>Ajouter vos Documents Personnels</h1>
       </div>
-      <form style="margin-top: 15px;">
+      <form style="margin-top: 15px;" [formGroup]="documentsForm">
         <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Recto</ion-label>
-      <ion-item>
-        <ion-icon lazy="true" slot="start" name="image"></ion-icon>
-        <ion-input type="file"  id="file-input1" accept="image/png, image/jpeg"></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="carteRecto"></ion-icon>
+          <ion-input type="file"  id="file-input1" accept="image/png, image/jpeg" [(ngModel)]="doc.carteRecto" formControlName="carteRecto"></ion-input>
+        </ion-item>
         <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Verso</ion-label>
         <ion-item>
-          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
-          <ion-input type="file"  id="file-input2" accept="image/png, image/jpeg"></ion-input>
+          <ion-icon lazy="true" slot="start" name="carteVerso"></ion-icon>
+          <ion-input type="file"  id="file-input2" accept="image/png, image/jpeg"  [(ngModel)]="doc.carteVerso" formControlName="carteVerso"></ion-input>
         </ion-item>
         <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justification de revenu</ion-label>
         <ion-item>
-          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
-          <ion-input type="file"  id="file-input3" accept="image/png, image/jpeg"></ion-input>
+          <ion-icon lazy="true" slot="start" name="justRev"></ion-icon>
+          <ion-input type="file"  id="file-input3" accept="image/png, image/jpeg" [(ngModel)]="doc.justRev" formControlName="justRev"></ion-input>
         </ion-item>
         <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justificatif Compte Postal</ion-label>
         <ion-item>
-          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
-          <ion-input type="file"  id="file-input4" accept="image/png, image/jpeg"></ion-input>
+          <ion-icon lazy="true" slot="start" name="justCp"></ion-icon>
+          <ion-input type="file"  id="file-input4" accept="image/png, image/jpeg" [(ngModel)]="doc.justCp" formControlName="justCp"></ion-input>
         </ion-item>
         <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justification d'adresse</ion-label>
         <ion-item>
-          <ion-icon lazy="true" slot="start" name="image"></ion-icon>
-          <ion-input type="file"  id="file-input5" accept="image/png, image/jpeg"></ion-input>
+          <ion-icon lazy="true" slot="start" name="justAdresse"></ion-icon>
+          <ion-input type="file"  id="file-input5" accept="image/png, image/jpeg" [(ngModel)]="doc.justAdresse" formControlName="justAdresse"></ion-input>
         </ion-item>
       </form>
       <ion-item style="margin-top: 10px;">Pour que nous puissions vérifier votre identité, veuillez prendre un selfie en tenant dans votre main votre carte d'identité comme indiqué dans la photo. Votre image sera utilisée exlusivement par la Poste Tunisienne pour la sécurisation de l'opération d'inscription aux services de MyPosteBank.</ion-item>
@@ -51,10 +51,9 @@
                     <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>
                   </g>
                 </svg>
-                Votre demande a bien été envoyée en succées vous vous recevez un appel téléphonique de chez La poste
-                ultérieurement.
+                Votre demande a bien été envoyée en succées vous vous recevez un message contenant votre identifiant et votre mot de passe
               </ion-card-content>
-              <ion-button href="menu/consulterComptes" style="align-items: center;">Acceuil</ion-button>
+              <ion-button href="home" style="align-items: center;">Acceuil</ion-button>
             </ion-card>
           </ion-content>
         </ng-template>
@@ -62,4 +61,3 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
-

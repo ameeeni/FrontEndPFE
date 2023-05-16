@@ -25,10 +25,6 @@ export class MenuPage implements OnInit {
           title:'Ouvrir un compte ',
           url :'nouveauCompte',
           icon:'briefcase-outline'
-        },{
-          title:'importer un nouveau compte ',
-          url :'menu/importerCompte',
-          icon:'briefcase-outline'
         }
       ],
     }, {
@@ -79,20 +75,18 @@ export class MenuPage implements OnInit {
        title : "Notifications",
        url :'notifications'
      },
-     {
-       title : "Réseau Postal et file d'attente",
-     },
-     {
-       title : "Cours de Change ",
-       url: 'cours-de-change'
-     },
+
+
      {
        title : "A propos myPosteBank",
+       url:'apropos'
      },
      {
        title : "Comment ça marche",
+       url:'comment-ca-marche'
      },{
        title : "FAQ",
+       url:"faq"
      }
    ]
 
