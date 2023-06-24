@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CoursDeChange</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">CoursDeChange</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-list>
+<!--  <ion-grid [fixed]="true">-->
+<!--    <ion-row>-->
+<!--      <ion-col size="6" size-md="4" size-lg="2">Monnaie</ion-col>-->
+<!--      <ion-col size="2">Sigle</ion-col>-->
+<!--      <ion-col size="2">unité</ion-col>-->
+<!--      <ion-col size="2">Valeur</ion-col>-->
+<!--    </ion-row>-->
+<!--  </ion-grid>-->
+  <ion-item>
+    <ion-input [(ngModel)]="from" placeholder="Enter text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="to" placeholder="Enter text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="amount" placeholder="Enter text"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="res" placeholder="Enter text"></ion-input>
+  </ion-item>
+    <ion-button (click)="getCurrency()" >Entrer</ion-button>
+
+</ion-list>

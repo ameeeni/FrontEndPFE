@@ -107,6 +107,18 @@ const routes: Routes = [
     path: 'documents-personnelle-inscrire',
     loadChildren: () => import('./documents-personnelle-inscrire/documents-personnelle-inscrire.module').then( m => m.DocumentsPersonnelleInscrirePageModule)
   },
+  {
+    path: 'apropos',
+    loadChildren: () => import('./apropos/apropos.module').then( m => m.AproposPageModule)
+  },
+  {
+    path: 'comment-ca-marche',
+    loadChildren: () => import('./comment-ca-marche/comment-ca-marche.module').then( m => m.CommentCaMarchePageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  },
 ];
 
 @NgModule({
