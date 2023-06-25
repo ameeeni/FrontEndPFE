@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Camera],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
