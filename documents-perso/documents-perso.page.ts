@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Camera, CameraResultType, CameraSource} from "@capacitor/camera";
 
 @Component({
   selector: 'app-documents-perso',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocumentsPersoPage implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  async captureImage() {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.Base64,
+      source: CameraSource.Camera
+    });
+  }
 }

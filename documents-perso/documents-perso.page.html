@@ -35,8 +35,9 @@
         </ion-item>
       </form>
       <ion-item style="margin-top: 10px;">Pour que nous puissions vérifier votre identité, veuillez prendre un selfie en tenant dans votre main votre carte d'identité comme indiqué dans la photo. Votre image sera utilisée exlusivement par la Poste Tunisienne pour la sécurisation de l'opération d'inscription aux services de MyPosteBank.</ion-item>
-      <ion-item style="--background: var(--ion-color-primary); color: white;
-   margin-top: 10px; border-radius: 8px;">Cliquez ici pour prendre  un selfie  avec la carte d'identité</ion-item>
+      <ion-button style="--background: var(--ion-color-primary); color: white;
+   margin-top: 10px; border-radius: 8px;" (click)="captureImage()"  >Prendre un selfie avec CIN</ion-button>
+
       <ion-button type="submit" class="cp-btn" id="open-modal" >
         Terminer
       </ion-button>

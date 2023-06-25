@@ -8,10 +8,10 @@
         <h1>Ajouter vos Documents Personnels</h1>
       </div>
       <form style="margin-top: 15px;" [formGroup]="documentsForm">
-        <ion-label style="margin-top: 20px; margin-left: 20px" > Entrer Votre Image de Carte Recto</ion-label>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Recto</ion-label>
         <ion-item>
           <ion-icon lazy="true" slot="start" name="carteRecto"></ion-icon>
-          <ion-input type="file"  id="file-input1" accept="image/png, image/jpeg" [(ngModel)]="doc.carteRecto" formControlName="carteRecto" ></ion-input>
+          <ion-input type="file"  id="file-input1" accept="image/png, image/jpeg" [(ngModel)]="doc.carteRecto" formControlName="carteRecto"></ion-input>
         </ion-item>
         <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Verso</ion-label>
         <ion-item>
@@ -35,8 +35,8 @@
         </ion-item>
       </form>
       <ion-item style="margin-top: 10px;">Pour que nous puissions vérifier votre identité, veuillez prendre un selfie en tenant dans votre main votre carte d'identité comme indiqué dans la photo. Votre image sera utilisée exlusivement par la Poste Tunisienne pour la sécurisation de l'opération d'inscription aux services de MyPosteBank.</ion-item>
-      <ion-button style="--background: var(--ion-color-primary); color: white;
-   margin-top: 10px; border-radius: 8px;" (click)="captureImage()"  >Prendre un selfie avec CIN</ion-button>
+      <ion-item style="--background: var(--ion-color-primary); color: white;
+   margin-top: 10px; border-radius: 8px;">Cliquez ici pour prendre  un selfie  avec la carte d'identité</ion-item>
       <ion-button type="submit" class="cp-btn" id="open-modal" >
         Terminer
       </ion-button>
