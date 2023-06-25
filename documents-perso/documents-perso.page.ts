@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Camera, CameraResultType, CameraSource} from "@capacitor/camera";
+import {FormBuilder, FormGroup} from "@angular/forms";
+import {Doc} from "../client-particulier/doc";
 
 @Component({
   selector: 'app-documents-perso',
@@ -7,13 +9,20 @@ import {Camera, CameraResultType, CameraSource} from "@capacitor/camera";
   styleUrls: ['./documents-perso.page.scss'],
 })
 export class DocumentsPersoPage implements OnInit {
-
-  constructor() {
+  doc= new Doc();
+  documentsForm !: FormGroup;
+  constructor( private fb : FormBuilder) {
   }
 
   ngOnInit() {
+    this.documentsForm = this.fb.group({
+      carteRecto: this.fb.control(''),
+      carteVerso: this.fb.control(''),
+      justRev: this.fb.control(''),
+      justCp: this.fb.control(''),
+      justAdresse: this.fb.control('')
+    });
   }
-
   async captureImage() {
     const image = await Camera.getPhoto({
       quality: 90,
@@ -22,4 +31,5 @@ export class DocumentsPersoPage implements OnInit {
       source: CameraSource.Camera
     });
   }
+
 }
