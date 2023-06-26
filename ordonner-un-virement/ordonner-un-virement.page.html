@@ -4,48 +4,63 @@
       <div class="register-title">
         <h1>Ordonner un virement</h1>
       </div>
-      <form>
-<!--        <ion-item>-->
-<!--          <ion-label position="floating">Numéro du compte:</ion-label>-->
-<!--          <ion-input placeholder="Ecrire votre numéro du compte:"  type="number"></ion-input>-->
-
-<!--        </ion-item>-->
-<!--        <ion-item>-->
-<!--          <ion-label position="floating">Type de la carte</ion-label>-->
-<!--          <ion-select aria-label="carte" placeholder="Choisir votre carte">-->
-<!--            <ion-select-option value="carte" ></ion-select-option>-->
-<!--          </ion-select>-->
-<!--        </ion-item>-->
+      <form [formGroup]="virementForm" >
         <ion-item>
-          <ion-label position="floating">Choisir votre compte :</ion-label>
-          <ion-select label-placement="floating" placeholder="Choisir votre compte :">
-            <ion-select-option></ion-select-option>
-          </ion-select>
+          <ion-label position="floating">Ecrire votre IBAN :</ion-label>
+          <ion-input type="number" formControlName="ibandeb" [(ngModel)]="virement.IBANDebiteur" >
+            <ion-text style="padding: 30px;"></ion-text>
+          </ion-input>
+          <small *ngIf="virementForm.controls['ibandeb'].errors && virementForm.controls['ibandeb'].touched" class="ion-color-danger">
+            Votre IBAN est obligatoire
+          </small>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Selectionner votre Bénéficiaire:</ion-label>
-          <ion-select label-placement="floating" placeholder="Selectionner votre Bénéficiaire:">
-            <ion-select-option ></ion-select-option>
-          </ion-select>
+          <ion-label position="floating">Ecrire l'IBAN de votre bénéficiaire :</ion-label>
+          <ion-input type="number" formControlName="ibanrec" [(ngModel)]="virement.IBANRecepteur">
+            <ion-text style="padding: 30px;"></ion-text>
+          </ion-input>
+          <small *ngIf="virementForm.controls['ibanrec'].errors && virementForm.controls['ibanrec'].touched" class="ion-color-danger">
+            Votre IBAN est obligatoire
+          </small>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Choisir type de Virement</ion-label>
-          <ion-select label-placement="floating" placeholder="Choisir votre type de Virement:">
+          <ion-select label-placement="floating"
+                      placeholder="Choisir votre type de Virement:"
+                      [(ngModel)]="virement.type_de_virement"
+                      formControlName="type_de_virement"
+          >
             <ion-select-option ></ion-select-option>
           </ion-select>
+          <small *ngIf="virementForm.controls['type_de_virement'].errors && virementForm.controls['type_de_virement'].touched" class="ion-color-danger">
+            Votre IBAN est obligatoire
+          </small>
         </ion-item>
         <ion-item (click)="showPicker = ! showPicker">
          <ion-label>Date de virement</ion-label>
-          <ion-text slot="end">
+          <ion-text slot="end" >
              {{formatedString}}
           </ion-text>
         </ion-item>
-        <ion-datetime *ngIf="showPicker" [value]="dateValue" #datetime (ionChange)="dateChanged(datetime.value)" showDefaultButtons="true" (ionCancel)="showPicker=false;">
+        <ion-datetime *ngIf="showPicker"
+                      [value]="dateValue" #datetime
+                      (ionChange)="dateChanged(datetime.value)"
+                      showDefaultButtons="true"
+                      (ionCancel)="showPicker=false;"
+                      [(ngModel)]="virement.date_de_virement"
+                      formControlName="date_de_virement">
         </ion-datetime>
+        <small *ngIf="virementForm.controls['date_de_virement'].errors && virementForm.controls['date_de_virement'].touched" class="ion-color-danger">
+          Votre IBAN est obligatoire
+        </small>
         <ion-item>
           <ion-label position="floating">Montant à Virer</ion-label>
-          <ion-input type="number">
+          <ion-input type="number" [(ngModel)]="virement.montant"
+          formControlName="montant">
             <ion-text style="padding: 30px;">DNT</ion-text>
+            <small *ngIf="virementForm.controls['montant'].errors && virementForm.controls['montant'].touched" class="ion-color-danger">
+              Votre IBAN est obligatoire
+            </small>
           </ion-input>
         </ion-item>
         <ion-button type="submit" class="cpr-btn" id="open-modal">

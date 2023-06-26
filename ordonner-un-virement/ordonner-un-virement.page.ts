@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {format, parseISO} from 'date-fns'
+import {Virement} from "./virement";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-ordonner-un-virement',
@@ -11,12 +13,20 @@ export class OrdonnerUnVirementPage implements OnInit {
   dateValue= format(new Date() , "yyyy-MM-dd" )+ "T09:00:00.000Z";
   formatedString="";
 
-
-  constructor() {
+ virement = new Virement ();
+ virementForm! : FormGroup;
+  constructor(private fb: FormBuilder) {
     this.setToday();
   }
 
   ngOnInit() {
+    this.virementForm = this.fb.group({
+      ibandeb : this.fb.control('' , [Validators.required , Validators.maxLength(34 )] ),
+      ibanrecp : this.fb.control('' ,[Validators.required , Validators.maxLength(34 )]),
+      type_de_virement : this.fb.control('' ,[Validators.required]),
+      date_de_virement : this.fb.control('' ,[Validators.required]),
+      montant : this.fb.control('',[Validators.required])
+    })
   }
   setToday(){
     this.formatedString=format(parseISO(format(new Date() , 'yyyy-MM-dd') +'T09:00:00.000Z') , 'HH:mm, MMM dd,  yyyy')
