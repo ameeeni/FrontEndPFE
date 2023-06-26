@@ -118,7 +118,11 @@ const routes: Routes = [
   {
     path: 'faq',
     loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  },  {
+    path: 'type-de-compte',
+    loadChildren: () => import('./type-de-compte/type-de-compte.module').then( m => m.TypeDeComptePageModule)
   },
+
 ];
 
 @NgModule({

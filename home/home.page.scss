@@ -7,6 +7,15 @@
   top: 50%;
   transform: translateY(-50%);
 }
+.logo-laposte{
+  margin-top: 0;
+  height:70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+}
 
 #container strong {
   font-size: 20px;
@@ -25,9 +34,12 @@
 #container a {
   text-decoration: none;
 }
-
+.welc-title{
+  text-align: center;
+  font-weight: normal;
+}
 .starting-image{
- margin-top: 150px;
+  margin-top: 50px;
   margin-left:10px;
   margin-right: 10px;
 }
